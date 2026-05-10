@@ -1,0 +1,89 @@
+.header {
+  display: flex;
+  max-width: var(--cMaxWidth);
+  width: var(--cWidth);
+  justify-content: space-between;
+  padding: 20px 0px;
+  margin-bottom: -100px;
+  box-sizing: border-box;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  z-index: 9999;
+}
+.header ul {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  column-gap: 40px;
+  row-gap: 8px;
+  align-items: end;
+}
+.header ul li {
+  margin-left: 0px;
+  letter-spacing: 1px;
+  color: #ccc;
+  font-weight: 600;
+  cursor: pointer;
+}
+.navbar-connect {
+  position: absolute;
+  display: none;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+.navbar-title {
+  display: flex;
+  align-items: center;
+}
+.logo-cut {
+  font-weight: 900;
+  font-size: 22px;
+  text-transform: uppercase;
+  position: relative;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+.logo-cut span {
+  display: block;
+  position: relative;
+  color: transparent; /* Hide the base text */
+}
+.logo-cut span::before {
+  content: "MOHD AFFAN";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: var(--accentColor);
+  clip-path: polygon(0 0, 100% 0, 100% 48%, 0 60%);
+  transform: translateY(-1px);
+}
+.logo-cut span::after {
+  content: "MOHD AFFAN";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  clip-path: polygon(0 65%, 100% 53%, 100% 100%, 0 100%);
+  transform: translateY(1px);
+}
+@media only screen and (min-width: 500px) {
+  .logo-cut {
+    font-size: 24px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .logo-cut {
+    font-size: 26px;
+  }
+}
